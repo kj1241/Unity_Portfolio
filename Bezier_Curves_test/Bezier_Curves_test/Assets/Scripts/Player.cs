@@ -1,11 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+
+
 
 public class Player : MonoBehaviour
 {
     //연동
-    public GameObject SkillPrefab;
     public GameObject Enemy;
 
     public Vector3 endPos;
@@ -17,33 +19,56 @@ public class Player : MonoBehaviour
     public float SkillCOuntTime = 0.15f;
     Quaternion Rotatation = Quaternion.Euler(new Vector3(0, 0, 0));
 
-    IEnumerator cor=null;
+    const int Skillcount =2;
+
+    class Skill
+    {
+        public Image UICoolDownImage;
+        public TMPro.TMP_Text UICoolDownCount;
+        public int SkillDelayCount = 0;
+        public bool isSkillCooldown = false;
+    }
+    public GameObject[] SkillPrefab = new GameObject[Skillcount];
+    public Image[] UICoolDownImage = new Image[Skillcount];
+    public TMPro.TMP_Text[] UICoolDownCount = new TMPro.TMP_Text[Skillcount];
+    Skill[] skills = new Skill[Skillcount];
+
+    void Start()
+    {
+        for (int i = 0; i < Skillcount; ++i)
+        {
+            skills[i] = new Skill(); //맞다 c#에서는 배열로 사용하면 공간창출해야됨
+            skills[i].UICoolDownImage = UICoolDownImage[i];
+            skills[i].UICoolDownImage.fillAmount = 0;
+            skills[i].UICoolDownCount = UICoolDownCount[i];
+            skills[i].UICoolDownCount.enabled = false;
+        }
+    }
 
     void Update()
     {
         float moveZ = Input.GetAxis("Vertical");
         float moveX = Input.GetAxis("Horizontal");
-        transform.Translate(new Vector3(moveX, 0f, moveZ).normalized * 0.03f);
+        transform.Translate(new Vector3(moveX, 0f, moveZ).normalized * 0.035f);
 
 
-        if (Input.GetKeyDown(KeyCode.Q))
+        if (Input.GetKeyDown(KeyCode.Q) && !skills[0].isSkillCooldown)
         {
-            if (cor == null)
-            {
-                cor = CreateSkill();
-                StartCoroutine(cor);
-            }
-            else
-            {
-                StopCoroutine(cor);
-                StartCoroutine(cor);
-            }
+            skills[0].isSkillCooldown = true;
+            StartCoroutine(CreateSkill(SkillPrefab[0], skills[0]));
+        }
+
+        if (Input.GetKeyDown(KeyCode.E) && !skills[1].isSkillCooldown)
+        {
+            skills[1].isSkillCooldown = true;
+            StartCoroutine(CreateSkill(SkillPrefab[1], skills[1]));
         }
 
     }
 
-    IEnumerator CreateSkill()
+    IEnumerator CreateSkill(GameObject SkillPrefab,Skill skills )
     {
+        
         int _skillCount = 0;
 
         while (_skillCount <= (int)SkillNumberCount / SkillNumberCountOneShot)
@@ -60,6 +85,27 @@ public class Player : MonoBehaviour
                 yield return new WaitForSeconds(SkillCOuntTime);
             }
         }
-        cor = null;
+        skills.UICoolDownImage.fillAmount = 1;
+
+        StartCoroutine(SkillCooldown(skills));
     }
+
+    IEnumerator SkillCooldown(Skill skills)
+    {
+        skills.SkillDelayCount = 5;
+        skills.UICoolDownImage.enabled = true;
+        while (skills.SkillDelayCount >= 0)
+        {
+            skills.SkillDelayCount--;
+            skills.UICoolDownCount.text = skills.SkillDelayCount.ToString();
+            skills.UICoolDownImage.fillAmount = (float)skills.SkillDelayCount / 5;
+            if (skills.SkillDelayCount == 0) 
+                break; // 바로나가기위해
+
+            yield return new WaitForSecondsRealtime(1f);
+        }
+        skills.isSkillCooldown = false;
+        skills.UICoolDownImage.enabled = false;
+    }
+
 }

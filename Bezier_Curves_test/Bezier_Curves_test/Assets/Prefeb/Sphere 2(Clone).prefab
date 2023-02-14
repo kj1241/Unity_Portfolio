@@ -147,6 +147,7 @@ TrailRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
+  - {fileID: 2100000, guid: 092ad4c7b169f4d418796389751d9d07, type: 2}
   - {fileID: 2100000, guid: c65bc15b7787c2b40b0591b8da40370e, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
@@ -168,7 +169,7 @@ TrailRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Time: 0.5
+  m_Time: 0.15
   m_Parameters:
     serializedVersion: 3
     widthMultiplier: 1
@@ -177,16 +178,16 @@ TrailRenderer:
       m_Curve:
       - serializedVersion: 3
         time: 0.012500763
-        value: 0.47876167
-        inSlope: 0.12132679
-        outSlope: 0.12132679
+        value: 0.45154762
+        inSlope: 0.46691915
+        outSlope: 0.46691915
         tangentMode: 0
         weightedMode: 0
         inWeight: 0.33333334
-        outWeight: 0.17713416
+        outWeight: 0.14196856
       - serializedVersion: 3
         time: 1
-        value: 0.992857
+        value: 0
         inSlope: 0.076086365
         outSlope: 0.076086365
         tangentMode: 0
@@ -198,8 +199,8 @@ TrailRenderer:
       m_RotationOrder: 4
     colorGradient:
       serializedVersion: 2
-      key0: {r: 1, g: 1, b: 1, a: 0}
-      key1: {r: 1, g: 1, b: 1, a: 0.8799938}
+      key0: {r: 1, g: 0.8533139, b: 0, a: 0}
+      key1: {r: 0.31496128, g: 0.9811321, b: 0, a: 0.8799938}
       key2: {r: 0, g: 0, b: 0, a: 1}
       key3: {r: 0, g: 0, b: 0, a: 0}
       key4: {r: 0, g: 0, b: 0, a: 0}
@@ -218,7 +219,7 @@ TrailRenderer:
       atime1: 1349
       atime2: 10023
       atime3: 65535
-      atime4: 0
+      atime4: 65535
       atime5: 0
       atime6: 0
       atime7: 0
@@ -228,7 +229,7 @@ TrailRenderer:
     numCornerVertices: 0
     numCapVertices: 0
     alignment: 0
-    textureMode: 1
+    textureMode: 0
     shadowBias: 0.1
     generateLightingData: 0
   m_MinVertexDistance: 0.02
@@ -335,6 +336,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enmey: {fileID: 0}
+  particle: {fileID: 7462135831452641860, guid: 85e0013f15290db4b9ec5b560022ffd5, type: 3}
   speed: 1
   PointAlpha: {x: -2.5, y: 1, z: 0}
   PointBeta: {x: 0, y: 1.5, z: 0}

@@ -12,6 +12,8 @@ public class Skill_BezierMissile : MonoBehaviour
     //private Vector3 endPos = Vector3.zero;
     public GameObject enmey;
 
+    public GameObject particle;
+
 
     float totalTime = 0; // ÃÑ½Ã°£
 
@@ -120,6 +122,7 @@ public class Skill_BezierMissile : MonoBehaviour
     void OnTriggerEnter(Collider collision) //
     {
         Destroy(this.gameObject, 0.35f);
+        Instantiate(particle);
     }
 
 }

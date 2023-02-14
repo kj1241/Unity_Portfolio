@@ -168,7 +168,7 @@ TrailRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Time: 0.5
+  m_Time: 0.15
   m_Parameters:
     serializedVersion: 3
     widthMultiplier: 1
@@ -176,8 +176,8 @@ TrailRenderer:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
-        time: 0.012500763
-        value: 0.47876167
+        time: 0.0059880232
+        value: 0.5195804
         inSlope: 0.12132679
         outSlope: 0.12132679
         tangentMode: 0
@@ -186,7 +186,7 @@ TrailRenderer:
         outWeight: 0.17713416
       - serializedVersion: 3
         time: 1
-        value: 0.992857
+        value: 0
         inSlope: 0.076086365
         outSlope: 0.076086365
         tangentMode: 0
@@ -300,7 +300,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: bb58a24da7960344a933c13dcd988a1d, type: 2}
+  - {fileID: 2100000, guid: 997e64a5fb5d2204b962ee098f79d802, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -335,6 +335,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enmey: {fileID: 0}
+  particle: {fileID: 7462135831452641860, guid: 85e0013f15290db4b9ec5b560022ffd5, type: 3}
   speed: 1
   PointAlpha: {x: -2.5, y: 1, z: 0}
   PointBeta: {x: 0, y: 1.5, z: 0}
@@ -352,7 +353,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _renderer: {fileID: 4313100334965617289}
-  _material: {fileID: 0}
+  _material: {fileID: 2100000, guid: 00b03b4271de63e488b7f5b764d8b2a8, type: 2}
   _trailPos: {x: 0, y: 0, z: 0}
   _trailRate: 10
 --- !u!135 &9103448969179671271
