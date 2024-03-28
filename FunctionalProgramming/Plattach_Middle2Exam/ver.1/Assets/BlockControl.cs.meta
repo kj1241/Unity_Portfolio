@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: e408ab933ba726e498d5c9486a27d8f3
+timeCreated: 1526278668
+licenseType: Free
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - block_root: {instanceID: 0}
+  - opague_material: {instanceID: 0}
+  - transparent_material: {instanceID: 0}
+  - a: {fileID: 2800000, guid: 94c896936b4eabd41b9ae248c78a39e1, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
