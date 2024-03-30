@@ -1,0 +1,212 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &6509787156848427639
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1331690374936839790}
+  - component: {fileID: 4419566287141247}
+  m_Layer: 0
+  m_Name: New
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1331690374936839790
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6509787156848427639}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4419566287141247
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6509787156848427639}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d0c51bb0b6e93049af5e88f93826e3b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  material: {fileID: 2100000, guid: 79664625d3de49b40b5c8f8dee7498cc, type: 2}
+  sprites:
+  - name: 2
+    outer:
+      serializedVersion: 2
+      x: 900
+      y: 931
+      width: 51
+      height: 50
+    inner:
+      serializedVersion: 2
+      x: 900
+      y: 931
+      width: 51
+      height: 50
+    rotated: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: 3
+    outer:
+      serializedVersion: 2
+      x: 627
+      y: 571
+      width: 138
+      height: 46
+    inner:
+      serializedVersion: 2
+      x: 627
+      y: 571
+      width: 138
+      height: 46
+    rotated: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: 1
+    outer:
+      serializedVersion: 2
+      x: 627
+      y: 524
+      width: 133
+      height: 46
+    inner:
+      serializedVersion: 2
+      x: 627
+      y: 524
+      width: 133
+      height: 46
+    rotated: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: 7
+    outer:
+      serializedVersion: 2
+      x: 900
+      y: 907
+      width: 70
+      height: 23
+    inner:
+      serializedVersion: 2
+      x: 900
+      y: 907
+      width: 70
+      height: 23
+    rotated: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: 6
+    outer:
+      serializedVersion: 2
+      x: 900
+      y: 982
+      width: 108
+      height: 42
+    inner:
+      serializedVersion: 2
+      x: 900
+      y: 982
+      width: 108
+      height: 42
+    rotated: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: 4
+    outer:
+      serializedVersion: 2
+      x: 627
+      y: 618
+      width: 272
+      height: 406
+    inner:
+      serializedVersion: 2
+      x: 627
+      y: 618
+      width: 272
+      height: 406
+    rotated: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: 5
+    outer:
+      serializedVersion: 2
+      x: 952
+      y: 948
+      width: 55
+      height: 33
+    inner:
+      serializedVersion: 2
+      x: 952
+      y: 948
+      width: 55
+      height: 33
+    rotated: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: 8
+    outer:
+      serializedVersion: 2
+      x: 0
+      y: 398
+      width: 626
+      height: 626
+    inner:
+      serializedVersion: 2
+      x: 0
+      y: 398
+      width: 626
+      height: 626
+    rotated: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: 9
+    outer:
+      serializedVersion: 2
+      x: 0
+      y: 170
+      width: 617
+      height: 227
+    inner:
+      serializedVersion: 2
+      x: 0
+      y: 170
+      width: 617
+      height: 227
+    rotated: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  mCoordinates: 0
+  mPixelSize: 1
+  mReplacement: {fileID: 0}
